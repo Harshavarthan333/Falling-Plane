@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ScoreDetect : MonoBehaviour
+
+25
+
+{
+private plane plane;
+void Start()
+{
+plane = GameObject.Find("plane").GetComponent<plane>();
+}
+
+void Update(){
+
+}
+
+void OnTriggerEnter2D(Collider2D other){
+if(other.gameObject.tag=="Player")
+{
+plane.UpdateScore();
+}
+}
+}
